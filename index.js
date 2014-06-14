@@ -39,5 +39,9 @@ function client (query, options, callback) {
 
   debug('Requesting %s', url);
 
-  get(url, callback);
+  get(url, function (error, response) {
+    if (error) return callback(error);
+    if (response.stat == 'fail') return callback(new Error(response.message));
+    return callback(undefined, response);
+  });
 }
