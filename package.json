@@ -1,6 +1,6 @@
 {
   "name": "flickr-client",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Flickr API Client",
   "main": "index.js",
   "scripts": {
