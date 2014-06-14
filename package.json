@@ -1,0 +1,30 @@
+{
+  "name": "flickr-client",
+  "version": "0.0.0",
+  "description": "Flickr API Client",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "flickr",
+    "photos",
+    "photography",
+    "api",
+    "client"
+  ],
+  "repository": {
+    "url": "git@github.com:npm-flickr/flickr-client.git",
+    "type": "git"
+  },
+  "author": "azer",
+  "license": "BSD",
+  "devDependencies": {
+    "prova": "^1.11.1",
+    "with-env": "^0.1.0"
+  },
+  "dependencies": {
+    "debug": "^1.0.2",
+    "get-json": "0.0.1"
+  }
+}
