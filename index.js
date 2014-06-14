@@ -7,6 +7,8 @@ var auth;
 module.exports = setup;
 
 function setup (options) {
+  if (typeof options == 'function') return options;
+
   auth = options || {};
   return client;
 }
