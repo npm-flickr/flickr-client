@@ -1,6 +1,6 @@
 ## flickr-client
 
-Flickr API Client
+Flickr API Client. Works on both NodeJS and Browsers
 
 ## Install
 
