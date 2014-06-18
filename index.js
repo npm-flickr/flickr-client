@@ -1,6 +1,7 @@
 var get = require("get-json");
 var debug = require("debug")('flickr-client');
 var querystring = require("querystring");
+var node = require("is-node");
 
 var auth;
 
@@ -34,14 +35,21 @@ function client (query, options, callback) {
         + query
         + '&api_key='
         + auth.key
-        + '&format=json&nojsoncallback=1'
+        + '&format=json'
+        + (node ? '&nojsoncallback=1' : '')
         + token + sig + qs;
 
   debug('Requesting %s', url);
 
-  get(url, function (error, response) {
+  if (node) {
+    get(url, done);
+  } else {
+    get(url, { param: 'jsoncallback' }, done);
+  }
+
+  function done (error, response) {
     if (error) return callback(error);
     if (response.stat == 'fail') return callback(new Error(response.message));
     return callback(undefined, response);
-  });
+  }
 }
