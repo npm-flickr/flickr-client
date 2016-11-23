@@ -20,12 +20,12 @@
   "author": "azer",
   "license": "BSD",
   "devDependencies": {
-    "prova": "^1.11.1",
+    "prova": "azer/prova",
     "with-env": "^0.1.0"
   },
   "dependencies": {
     "debug": "^1.0.2",
-    "get-json": "0.0.x",
-    "is-node": "0.0.0"
+    "get-json": "azer/get-json",
+    "is-node": "azer/is-node"
   }
 }
