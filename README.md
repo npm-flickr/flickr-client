@@ -5,7 +5,7 @@ Flickr API Client. Works on both NodeJS and Browsers
 ## Install
 
 ```bash
-$ npm install flickr-client
+$ npm install npm-flickr/flickr-client
 ```
 
 ## Usage
